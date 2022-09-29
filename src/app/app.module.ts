@@ -6,22 +6,31 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+
 import { AssignmentsComponent } from './assignments/assignments.component';
 import { RenduDirective } from './shared/rendu.directive';
+import { FormsModule } from '@angular/forms';
+import { AssignmentDetailComponent } from './assignment-detail/assignment-detail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AssignmentsComponent,
-    RenduDirective
+    RenduDirective,
+    AssignmentDetailComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatButtonModule, 
-    MatIconModule, 
-    MatDividerModule
+    MatButtonModule, MatIconModule, MatDividerModule,
+    MatInputModule, MatFormFieldModule,
+    MatDatepickerModule, MatNativeDateModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,13 +1,7 @@
-.rendu{
-    color:green
-}
-
-.nonRendu{
-    color:red
-}
-
-.form{
+.container{
     display:flex;
-    flex-direction:column;
-    margin:5px;
+    flex-direction: column;
+}
+.ajouterBtn{
+    align-self :flex-end
 }

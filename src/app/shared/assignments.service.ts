@@ -10,16 +10,19 @@ import { LoggingService } from './logging.service';
 export class AssignmentsService {
   assignments:Assignment[] = [
     {
+      id:1,
       nom:"TP1 sur WebComponents, un lecteur audio amélioré",
       dateDeRendu: new Date('2020-01-17'),
       rendu:true
     },
     {
+      id:2,
       nom:"TP2 sur Angular, un joli gestionnaire de devoir",
       dateDeRendu: new Date('2020-12-15'),
       rendu:false
     },
     {
+      id:3,
       nom:"TP3 sur Angular, utilisation du routeur et de Web Services",
       dateDeRendu: new Date('2020-01-04'),
       rendu:false
@@ -30,6 +33,10 @@ export class AssignmentsService {
   getAssignments():Observable<Assignment[]>{
       return of(this.assignments);
     }
+
+  getAssignment(id) : Observable<Assignment> {
+    return of(this.assignments.find(a => a.id === id));
+  }
   
   addAssignment(assignment:Assignment): Observable<string>{
     this.assignments.push(assignment);

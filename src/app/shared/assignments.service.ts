@@ -34,7 +34,7 @@ export class AssignmentsService {
       return of(this.assignments);
     }
 
-  getAssignment(id) : Observable<Assignment> {
+  getAssignment(id:number) : Observable<Assignment | undefined> {
     return of(this.assignments.find(a => a.id === id));
   }
   
